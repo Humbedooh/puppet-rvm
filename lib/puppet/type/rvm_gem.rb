@@ -2,7 +2,7 @@ Puppet::Type.newtype(:rvm_gem) do
   @doc = 'Ruby Gem support using RVM.'
 
   def self.title_patterns
-    [[%r{/^(?:(.*)\/)?(.*)$/}, [[:ruby_version, ->(x) { x }], [:name, ->(x) { x }]]]]
+    [[%r{/^(?:(.*)\/)?(.*)$/}, [[:ruby_version], [:name]]]]
   end
 
   ensurable do
